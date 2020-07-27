@@ -1,0 +1,75 @@
+﻿@model CommentSystem.Models.Comment
+@*@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager*@
+@{
+
+}
+
+
+@foreach (var item in ViewBag.Comment)
+{
+
+    <div class="card-comment" data-id="@item.CommentID" style="text-align:right">
+        <img class="img-circle img-sm" src="~/dist/img/user4-128x128.jpg" alt="User Image" style="float:right; padding-left:4px">
+
+        <div class="comment-text">
+            <span class="username">
+                @item.Username
+                <span class="text-muted float-left"> @item.CommentDate</span>
+            </span>
+            @item.CommentText
+        </div>
+        @*<footer>
+            <a class="reply-link" asp-route-id="@item.CommentID">رد</a>
+        </footer>*@
+    </div>
+    //var children = Model.Where(x => x.ParentId == item.CommentID).ToList();
+   // if (children.Count() > 0)
+   // {
+      //  <ul data-parentid="@item.CommentID" class="replies">
+            @*@RenderComment(children);*@
+       // </ul>
+    //}
+
+}
+
+
+@*<div data-id="@comment.CommentID" class="comment-body">
+                <header>
+                    <a href="javascript:void(0);" class="userlink">@comment.Username</a> -
+                    <span class="pubdate">posted @comment.CommentDate.ToString("dd-MM-yyyy")</span>
+                </header>
+                <p>
+                    @comment.CommentText
+                </p>
+                <footer>
+                    <a class="reply-link" href="@comment.CommentID">Reply</a>
+                </footer>
+            </div>
+
+            @{
+                var children = Model.Where(x => x.ParentId == comment.CommentID).ToList();
+                if (children.Count() > 0)
+                {
+                    <ul data-parentid="@comment.CommentID" class="replies">
+                        @RenderComment(children);
+                    </ul>
+                }
+            }
+
+        </div>
+
+    }
+
+    <div id="comment-section" class="row">
+        <div class="col-sm-7">
+            <ul class="comments">
+                @RenderComment(Model.Where(x => x.ParentId == 0))
+            </ul>
+        </div>
+
+    </div>*@
+
+
+
