@@ -3,7 +3,7 @@ Using Asp.net MVC Core 3.1 And Identity
 
 ### Getting Started and Installation
 
-1. Creat .NET Core 3.1 project in Visual Studio
+1. Create .NET Core 3.1 project in Visual Studio.
 2. Install the EF NuGet package  
    ```sh
    NuGet\Install-Package EntityFramework 
