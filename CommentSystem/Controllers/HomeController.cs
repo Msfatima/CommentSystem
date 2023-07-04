@@ -28,10 +28,10 @@ namespace CommentSystem.Controllers
 
         public IActionResult Index()
         {
-
             ViewBag.Comment= _Context.Comments.OrderBy(x => x.CommentDate).ToList();
             var model = _Context.Comments.OrderBy(x => x.CommentDate).FirstOrDefault();
             return View(model);
+           
         }
         public IActionResult CreateComments(Comment comment)
         {

@@ -9,28 +9,23 @@
 
 <!-- /.card-header -->
 <div class="card-body">
-
-    <h3 Style="text-align:center"> التعليقات شاركنا رايك    </h3>
+    <h3 Style="text-align:center">    Comments | التعليقات   </h3>
+    <p Style="text-align:center">    Share your opinion | شاركنا رايك  </p>
    
 </div>
 <!-- /.card-body -->
 
 @if (Model == null)
 {
-
-
-    <!-- /.card-footer -->
     <div class="card-footer" style="text-align:right">
-        <form asp-controller="Home" asp-action="CreateComments" method="post">
-            <img class="img-fluid img-circle img-sm" src="../dist/img/user4-128x128.jpg" alt="Alt Text" 
-                 style="float:right; padding-left:4px">
-
-            <div class="img-push" style="text-align:right">
+        <form asp-controller="Home" asp-action="CreateComments" method="post">        
+            <div style="text-align:right">
                 <input type="text" class="form-control form-control-sm"
                        asp-for="CommentText"
-                       placeholder="اكتب تعليقك هنا ">
+                       placeholder=" Write here | اكتب تعليقك هنا ">
                 <div class="col-sm-7 offset-sm-3" style="float:right">
-                    <button class="btn btn-primary" id="submit">ارسال</button>
+                    <br>
+                    <button class="btn btn-primary" id="submit">Send  </button>
                 </div>
             </div>
         </form>
@@ -45,13 +40,13 @@ else
     </div>
     <div class="card-footer" style="text-align:right">
         <form asp-controller="Home" asp-action="CreateComments" method="post">
-            <img class="img-fluid img-circle img-sm" src="../dist/img/user4-128x128.jpg" alt="Alt Text">
-            <!-- .img-push is used to add margin to elements next to floating images -->
-            <div class="img-push" >
+
+            <div >
                 <input type="text" class="form-control form-control-sm"
                        asp-for="CommentText"
-                       placeholder="اكتب تعليقك هنا ">
-            <button class="btn btn-primary" id="submit">ارسال</button>
+                       placeholder="Write here | اكتب تعليقك هنا ">
+                       <br>
+            <button class="btn btn-primary" id="submit"> Send   </button>
                 
             </div>
         </form>
